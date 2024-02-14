@@ -1,5 +1,5 @@
 let billetter = [];
-function nyBestilling(){ //legge til inputs som variabler
+function nyBestilling() { //legge til inputs som variabler
     const film = document.getElementById("film").value;
     const antall = document.getElementById("antall").value;
     const fornavn = document.getElementById("fornavn").value;
@@ -12,43 +12,37 @@ function nyBestilling(){ //legge til inputs som variabler
     if (!sjekkFilm(film)) {
         visError("errorFilm", "Du må velge en film");
         erRiktig = false;
-    }
-    else {
+    } else {
         skjulError("errorFilm")
     }
     if (!sjekkAntall(antall)) {
         visError("errorAntall", "Velg antall billetter");
         erRiktig = false;
-    }
-    else {
+    } else {
         skjulError("errorAntall")
     }
     if (!sjekkFornavn(fornavn)) {
         visError("errorFornavn", "Skriv inn fornavn");
         erRiktig = false;
-    }
-    else {
+    } else {
         skjulError("errorFornavn")
     }
     if (!sjekkEtternavn(etternavn)) {
         visError("errorEtternavn", "Skriv inn etternavn");
         erRiktig = false;
-    }
-    else {
+    } else {
         skjulError("errorEtternavn")
     }
     if (!sjekkTelefonnummer(telefonnummer)) {
         visError("errorTelefonnummer", "Skriv inn gyldig telefonnummer");
         erRiktig = false;
-    }
-    else {
+    } else {
         skjulError("errorTelefonnummer")
     }
     if (!sjekkEpost(epost)) {
         visError("errorEpost", "Skriv inn gyldig epost");
         erRiktig = false;
-    }
-    else {
+    } else {
         skjulError("errorEpost")
     }
 
@@ -64,21 +58,19 @@ function nyBestilling(){ //legge til inputs som variabler
     if (erRiktig === true) { //push input til array hvis input er gyldig
         billetter.push(billett);
         resetInput();//kaller på metoden
+
+        /*nullstiller inputboksene "manuelt"
+        document.getElementById("film").value = "";
+        document.getElementById("antall").value = "";
+        document.getElementById("fornavn").value = "";
+        document.getElementById("etternavn").value = "";
+        document.getElementById("telefonnummer").value = "";
+        document.getElementById("epost").value = "";*/
+
+        console.log("Ny bestilling registrert");
+
+        visBilletter();
     }
-
-    
-
-    /*nullstiller inputboksene "manuelt"
-    document.getElementById("film").value = "";
-    document.getElementById("antall").value = "";
-    document.getElementById("fornavn").value = "";
-    document.getElementById("etternavn").value = "";
-    document.getElementById("telefonnummer").value = "";
-    document.getElementById("epost").value = "";*/
-
-    console.log("Ny bestilling registrert");
-
-    visBilletter();
 }
 function resetInput(){ //nullstiller inputbokser av verdiene tall og tekst
     const input = document.querySelectorAll('input[type="number"], input[type="text"]');
