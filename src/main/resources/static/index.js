@@ -63,10 +63,10 @@ function nyBestilling(){ //legge til inputs som variabler
 
     if (erRiktig === true) { //push input til array hvis input er gyldig
         billetter.push(billett);
+        resetInput();//kaller på metoden
     }
 
-    //kaller på metoden
-    resetInput();
+    
 
     /*nullstiller inputboksene "manuelt"
     document.getElementById("film").value = "";
