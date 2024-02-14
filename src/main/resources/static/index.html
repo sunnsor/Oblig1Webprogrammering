@@ -24,18 +24,29 @@
         <option value="Film 4">Film 4</option>
     </select>
 </form>
-
+<br>
+<form> Antall
+    <label for="antall"></label>
+    <input type="number" id="antall" min="1" max="9">
+    <span id="errorAntall" class="error"></span>
+</form>
 <br>
 <table>
-    <tr><td>Antall</td></tr><input type="number" id="antall" min="1" max="9"/><td><span id="errorAntall" class="error"></span></td></tr>
+    <tr><td>Fornavn</td><td>
+        <input type="text" id="fornavn"/></td><td>
+        <span id="errorFornavn" class="error"></span></td></tr>
 
-    <tr><td>Fornavn</td><td><input type="text" id="fornavn"/></td><td><span id="errorFornavn" class="error"></span></td></tr>
+    <tr><td>Etternavn</td><td>
+        <input type="text" id="etternavn"/></td>
+        <td><span id="errorEtternavn" class="error"></span></td></tr>
 
-    <tr><td>Etternavn</td><td><input type="text" id="etternavn"/></td><td><span id="errorEtternavn" class="error"></span></td></tr>
+    <tr><td>Telefonnummer</td>
+        <td><input type="number" id="telefonnummer"/></td>
+        <td><span id="errorTelefonnummer" class="error"></span></td></tr>
 
-    <tr><td>Telefonnummer</td><td><input type="number" id="telefonnummer"/></td><td><span id="errorTelefonnummer" class="error"></span></td></tr>
-
-    <tr><td>E-post</td><td><input type="text" id="epost"/></td><td><span id="errorEpost" class="error"></span></td></tr>
+    <tr><td>E-post</td>
+        <td><input type="text" id="epost"/></td>
+        <td><span id="errorEpost" class="error"></span></td></tr>
 </table>
 <br>
 
