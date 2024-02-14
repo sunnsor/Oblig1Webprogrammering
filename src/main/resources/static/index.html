@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kinobilletter</title>
+    <script type="application/javascript" src="index.js"></script>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Bestilling av kinobilletter</h1>
+
+<form> Velg film:
+    <span id="errorFilm" class="error"></span>
+    <select id="film">
+        <option selected disabled>Velg film her</option>
+        <option value="Film 1">Film 1</option>
+        <option value="Film 2">Film 2</option>
+        <option value="Film 3">Film 3</option>
+        <option value="Film 4">Film 4</option>
+    </select>
+</form>
+
+<br>
+<table>
+    <tr><td>Antall</td></tr><input type="number" id="antall" min="1" max="9"/><td><span id="errorAntall" class="error"></span></td></tr>
+
+    <tr><td>Fornavn</td><td><input type="text" id="fornavn"/></td><td><span id="errorFornavn" class="error"></span></td></tr>
+
+    <tr><td>Etternavn</td><td><input type="text" id="etternavn"/></td><td><span id="errorEtternavn" class="error"></span></td></tr>
+
+    <tr><td>Telefonnummer</td><td><input type="number" id="telefonnummer"/></td><td><span id="errorTelefonnummer" class="error"></span></td></tr>
+
+    <tr><td>E-post</td><td><input type="text" id="epost"/></td><td><span id="errorEpost" class="error"></span></td></tr>
+</table>
+<br>
+
+<button onclick="nyBestilling()">
+    Kjøp billett
+</button>
+
+<h2>Alle billetter</h2>
+
+<div id="mineBilletter"></div>
+
+<button onclick="slettAlle()">
+    Slett alle billetter
+</button>
+
+</body>
+</html>
